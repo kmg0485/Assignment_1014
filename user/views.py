@@ -40,7 +40,7 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             loginsession(request, user)
-            return redirect('user:user')
+            return redirect('/home/')
         else: 
             return render(request,'login.html',{'error':'이메일 혹은 패스워드를 확인 해 주세요'}) 
         
